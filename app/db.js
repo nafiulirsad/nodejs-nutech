@@ -1,10 +1,10 @@
 const { Pool } = require('pg');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 const pool = new Pool({
-    user: 'nutech',
-    host: 'localhost',
-    database: 'nutech_test',
-    password: 'nutech',
-    port: 5432,
+    connectionString: process.env.POSTGRES_URI
 });
 
 module.exports = pool;
