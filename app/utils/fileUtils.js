@@ -22,7 +22,7 @@ const uploadFile = multer({
 });
 
 const isValidFile = (file) => {
-    return file && ['image/jpeg', 'image/png'].includes(file.mimetype);
+    return file && ['image/jpg', 'image/jpeg', 'image/png'].includes(file.mimetype);
 };
 
 module.exports = { uploadFile, isValidFile };
